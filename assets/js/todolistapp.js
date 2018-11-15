@@ -6,5 +6,8 @@ $("li").click(function()
 
 $("span").click(function()
 {
-    $(this).parent().remove();
+    $(this).parent().fadeOut(400, function()
+    {
+        $(this).remove();
+    });
 })
