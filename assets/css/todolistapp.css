@@ -1,7 +1,15 @@
 body
 {
     font-family: Roboto, sans serif;
+    background: #fffbd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+.fa-plus
+{
+    float: right;
 }
 h1
 {
@@ -30,6 +38,25 @@ ul
     box-shadow: 0 0 3px rgba(0,0,0, 0.5);
 }
 
+span
+{
+    background: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width:0;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+li:hover span
+{
+    width:40px;
+    opacity: 1.0;
+}
+
 .completedTask
 {
     color: "grey";
@@ -39,6 +66,26 @@ ul
 li
 {
     background: white;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+input
+{
+    font-size: 18px;
+    background: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgba(0,0,0, 0.0)
+}
+
+input:focus
+{
+    background: white;
+    border: 3px solid #2980b9;
+    outline: none;
 }
 
 li:nth-child(2n)
